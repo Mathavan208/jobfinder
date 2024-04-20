@@ -9,7 +9,13 @@ const teacher=mongoose.Schema({
 	staffId:{type:String,minlength:5,required:true,unique:true},
 	staffname:{type:String,required:true}
 });
+const feedback=mongoose.Schema({
+	staffId:{type:String,minlength:5,required:true,unique:true},
+	feedback:{type:Array,required:true}
+})
 const Teachers=mongoose.model('teachers',teacher);
 const Users=mongoose.model('users',user);
+const Feedback=mongoose.model('feedback',feedback);
 exports.Teachers=Teachers
 exports.Users=Users;
+exports.Feedback=Feedback;

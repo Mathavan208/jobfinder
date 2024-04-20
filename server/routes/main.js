@@ -10,7 +10,7 @@ const nodemailer=require('nodemailer');
 routes.use(express.urlencoded({ extended: true }));
 
 // Import the Users model from the database module
-const { Users } = require('../database.js');
+const { Users} = require('../database.js');
 
 // Connect to MongoDB
 try {
